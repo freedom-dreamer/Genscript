@@ -30,5 +30,4 @@ echo "exec dbus-launch --exit-with-session startplasma-x11" >> /home/defaultuser
 #echo "exec qtile" >> ~/.xinitrc
 #echo "exec qtile" >> /home/defaultuser/.xinitrc
 
-#Accepting only FSF approved licenses for further programs, as it should be
-echo "ACCEPT_LICENSE=\"-* @FSF-APPROVED\"" >> /etc/portage/make.conf
+echo "We are done! You should manually change the ACCEPT_LICENSE variable in /etc/portage/make.conf at least to @FREE"

@@ -31,8 +31,11 @@ echo "sys-kernel/linux-firmware @BINARY-REDISTRIBUTABLE" >> /etc/portage/package
 echo "sys-firmware/intel-microcode intel-ucode" >> /etc/portage/package.license/kernel
 
 #configuring locales
+echo "en_US.UTF-8 UTF-8"
 echo "LANG=\"en_US.UTF-8\"" >> /etc/env.d/02locale
 echo "LC_COLLATE=\"C\"" >> /etc/env.d/02locale
+locale-gen
+eselect locale set 3
 
 #reload environment
 env-update && source /etc/profile && export PS1="(chroot) ${PS1}"

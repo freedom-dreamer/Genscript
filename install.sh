@@ -10,7 +10,6 @@ dd if=/dev/zero of=/dev/sda status=progress
 
 #Let's set up the net, as it may be needed during the installation, even though this script requires you to have the Hardened stage3 tarball
 net-setup eth0
-dhcpd eth0
 
 #Now let's write the MSDOS label on /dev/sda and create a /, a /home and a swap  partition
 echo "please create 3 separate partitions, on /dev/sda"
